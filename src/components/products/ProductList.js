@@ -1,15 +1,15 @@
 import Product from './Product'
 import useProducts from '../../hooks/useProducts'
 
-export default function ProductList(){
+export default function ProductList() {
   const { products } = useProducts()
 
-  const list = products?( products.map(product => {
+  const list = products ? (products.map(product => {
     return (
-      <Product 
+      <Product
         key={product.id}
-        item={product} 
-      /> 
+        item={product}
+      />
     )
   })) : <p>No products available</p>
 
